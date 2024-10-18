@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>ISCAM</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link" data-target="inicio">Inicio</a></li>
+            <li><a href="#" class="nav-link" data-target="productos">Productos</a></li>
+            <li><a href="#" class="nav-link" data-target="ofertas">Ofertas</a></li>
+            <li><a href="#" class="nav-link" data-target="carrito">Carrito</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Inicio -->
+        <section id="inicio" style="display: block;">
+            <h2>Bienvenido a ISCAM</h2>
+            <p>Estamos encantados de tenerte aquí. Explora nuestra selección de productos eléctricos de alta calidad y aprovecha nuestras ofertas especiales.</p>
+            <img src="bienvenida.jpg" alt="Bienvenida" class="bienvenida-img" style="max-width: 100%; height: auto;">
+            
+            <h3>Información Importante</h3>
+            <p>En ISCAM, ofrecemos una amplia gama de productos eléctricos, desde dispositivos móviles hasta electrodomésticos. Nuestra prioridad es brindar calidad y satisfacción a nuestros clientes.</p>
+            <img src="productos-electricos.jpg" alt="Productos Eléctricos" class="info-img" style="max-width: 100%; height: auto;">
+        </section>
+
+        <section id="productos" style="display: none;">
+            <h2>Productos Destacados</h2>
+            <div class="producto" data-name="Audífonos" data-price="19.99" data-image="producto1.jpg">
+                <img src="producto1.jpg" alt="Producto 1">
+                <h3>Audífonos</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-name="Portátil HP" data-price="29.99" data-image="producto2.jpg">
+                <img src="producto2.jpg" alt="Producto 2">
+                <h3>Portátil HP</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+            <div class="producto" data-name="Parlantes Bluetooth" data-price="15.99" data-image="producto3.jpg">
+                <img src="producto3.jpg" alt="Producto 3">
+                <h3>Parlantes Bluetooth</h3>
+                <p>$15.99</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+        </section>
+
+        <!-- Sección de Ofertas -->
+        <section id="ofertas" style="display: none;">
+            <h2>Ofertas Especiales</h2>
+            <div class="oferta" data-name="Audífonos" data-price="14.99" data-image="producto1.jpg">
+                <img src="producto1.jpg" alt="Audífonos en oferta">
+                <h3>Descuento en Audífonos</h3>
+                <p>Ahora solo $14.99 (Antes $19.99)</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+            <div class="oferta" data-name="Portátil HP" data-price="24.99" data-image="producto2.jpg">
+                <img src="producto2.jpg" alt="Portátil HP en oferta">
+                <h3>Portátil HP en Oferta</h3>
+                <p>Solo $24.99 (Antes $29.99)</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+            <div class="oferta" data-name="Parlantes Bluetooth" data-price="12.79" data-image="producto3.jpg">
+                <img src="producto3.jpg" alt="Parlantes Bluetooth en oferta">
+                <h3>Parlantes Bluetooth con 20% de Descuento</h3>
+                <p>Ahora solo $12.79 (Antes $15.99)</p>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+        </section>
+
+        <!-- Sección del Carrito -->
+        <section id="carrito" style="display: none;">
+            <h2>Tu Carrito</h2>
+            <div id="cart-items"></div>
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+            <div id="suggestions" style="display: none;">
+                <h3>Productos Sugeridos</h3>
+                <p>¿No has agregado nada a tu carrito? Aquí tienes algunas recomendaciones:</p>
+                <div class="producto" data-name="Audífonos" data-price="19.99" data-image="producto1.jpg">
+                    <img src="producto1.jpg" alt="Producto 1">
+                    <h3>Audífonos</h3>
+                    <p>$19.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+                <div class="producto" data-name="Portátil HP" data-price="29.99" data-image="producto2.jpg">
+                    <img src="producto2.jpg" alt="Producto 2">
+                    <h3>Portátil HP</h3>
+                    <p>$29.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Mi Tienda en Línea. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="paginaDeVentas.js"></script>
+</body>
+</html>
